@@ -1,0 +1,13 @@
+{
+  "name": "RMLive",
+  "short_name": "RMLive",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [{
+    "src": "/assets/img/logo.png",
+    "sizes": "320x250",
+    "type": "image/png"
+  }],
+  "background_color": "#4e8ef7",
+  "theme_color": "#4e8ef7"
+}

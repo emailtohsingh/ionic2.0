@@ -1,0 +1,26 @@
+page-share{
+    .header-text{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 14px;
+        color: snow;
+        font-weight: bold;
+        padding-left: 9px;
+        padding-top:9px;
+        background: #222;
+        height: 35px; 
+        z-index: 999999; 
+        
+    }
+    .content-text{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size: 11px;
+        color: dimgray;
+        padding: 9px;
+
+    }
+    .close-btn2{
+        position:absolute;
+        top:0;
+        right:0;
+    }
+}

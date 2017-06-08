@@ -1,0 +1,36 @@
+page-products{
+    .product-details{
+        ion-slides {
+            height:75%;
+        }
+    }
+    .cart-notification-badge {
+        position:absolute !important; 
+        top:-5px !important;
+        left:10px !important; 
+        font-size:9px !important; 
+        font-weight:bold !important;
+    }
+
+    .cart-notification{
+        position:relative !important; 
+        font-weight:bold !important; 
+        font-size:1.6em !important; 
+    }
+    .fontSize{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size : 12px;
+    }
+    .wrap-text{
+        white-space:normal;
+    }
+    ion-col{
+        padding-bottom: 1px !important;
+        padding-top: 1px !important;
+    }
+
+    .scroll-content {
+        padding: 5px ! important;
+    }
+    
+}

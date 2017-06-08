@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      RM Live
+    </ion-title>
+    <ion-buttons right (click)="openCart()">
+      <button ion-button>
+        <ion-icon name="ios-cart-outline" class="cart-notification" color="white">
+          <ion-badge *ngIf="cartSize > 0" color="danger" class="cart-notification-badge">{{cartSize}}</ion-badge>
+        </ion-icon>
+      </button>
+      <button ion-button>
+        <ion-icon name="notifications" class="cart-notification" color="white">
+          <ion-badge *ngIf="cartSize > 0"color="danger" class="cart-notification-badge">{{cartSize}}</ion-badge>
+        </ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <!--<div style="height: 81px;background: indianred;margin: 9px;">Push Notifications</div>-->
+  <ion-card *ngFor="let category of catList" (click)="toggleDetails(category)" ng-cloak>
+
+    <ion-row class="font-size">
+      <ion-col item-left>
+        <div>
+          <img src="assets/apps/{{category.picture}}" *ngIf="category.picture" />
+          <img src="assets/apps/no-image.png" *ngIf="!category.picture">
+        </div>
+        <div text-center>{{category.name}}</div>
+      </ion-col>
+      <ion-col item-left width-50>
+        <ion-note>{{category.description}}</ion-note>
+      </ion-col>
+      <ion-col item-right>
+        <ion-icon color="danger" item-right [name]="category.icon"></ion-icon>
+      </ion-col>
+    </ion-row>
+
+    <div *ngIf="category.showDetails">
+      <ion-row wrap class="font-size">
+        <ion-col width-33 *ngFor="let child of category.children" (click)="loadProducts(child.CategoryId, child.name)">
+          <ion-row style="margin-bottom: 10px" text-center>
+            <div style="margin-left:12px">
+              <img src="assets/apps/{{child.picture}}" *ngIf="child.picture" style="width:48px; height:48px">
+              <img src="assets/apps/no-image.png" *ngIf="!child.picture" style="width:48px; height:48px">
+            </div>
+          </ion-row>
+          <ion-row>
+            <div style="margin-left:12px;">{{child.name}}</div>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-card>
+</ion-content>

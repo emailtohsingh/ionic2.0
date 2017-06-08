@@ -1,0 +1,464 @@
+@font-face {
+  font-family: "RMLiveIcons";
+  src: url('../assets/fonts/RMLiveIcons.eot');
+  src: url('../assets/fonts/RMLiveIcons.eot?#iefix') format('eot'),
+  url('../assets/fonts/RMLiveIcons.woff2') format('woff2'),
+  url('../assets/fonts/RMLiveIcons.woff') format('woff'),
+  url('../assets/fonts/RMLiveIcons.ttf') format('truetype'),
+  url('../assets/fonts/RMLiveIcons.svg#RMLiveIcons') format('svg');
+}
+
+@mixin rm-icons-styles {
+  font-family: "RMLiveIcons";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  // speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+  text-decoration: none;
+  text-transform: none;
+}
+
+%rm-icons {
+  @include rm-icons-styles;
+}
+
+@function rm-icons-char($filename) {
+  $char: "";
+
+  @if $filename == archive {
+  $char: "\E001";
+}
+  @if $filename == arrow-down {
+  $char: "\E002";
+}
+  @if $filename == arrow-left {
+  $char: "\E003";
+}
+  @if $filename == arrow-right {
+  $char: "\E004";
+}
+  @if $filename == arrow-up {
+  $char: "\E005";
+}
+  @if $filename == bell {
+  $char: "\E006";
+}
+  @if $filename == calendar {
+  $char: "\E007";
+}
+  @if $filename == camera {
+  $char: "\E008";
+}
+  @if $filename == cart {
+  $char: "\E009";
+}
+  @if $filename == chart {
+  $char: "\E00A";
+}
+  @if $filename == check {
+  $char: "\E00B";
+}
+  @if $filename == chevron-down {
+  $char: "\E00C";
+}
+  @if $filename == chevron-left {
+  $char: "\E00D";
+}
+  @if $filename == chevron-right {
+  $char: "\E00E";
+}
+  @if $filename == chevron-up {
+  $char: "\E00F";
+}
+  @if $filename == clock {
+  $char: "\E010";
+}
+  @if $filename == close-o {
+  $char: "\E011";
+}
+  @if $filename == close {
+  $char: "\E012";
+}
+  @if $filename == comment {
+  $char: "\E013";
+}
+  @if $filename == credit-card {
+  $char: "\E014";
+}
+  @if $filename == envelope {
+  $char: "\E015";
+}
+  @if $filename == exclamation {
+  $char: "\E016";
+}
+  @if $filename == external-link {
+  $char: "\E017";
+}
+  @if $filename == eye {
+  $char: "\E018";
+}
+  @if $filename == gear {
+  $char: "\E019";
+}
+  @if $filename == heart {
+  $char: "\E01A";
+}
+  @if $filename == image {
+  $char: "\E01B";
+}
+  @if $filename == like {
+  $char: "\E01C";
+}
+  @if $filename == link {
+  $char: "\E01D";
+}
+  @if $filename == location {
+  $char: "\E01E";
+}
+  @if $filename == lock {
+  $char: "\E01F";
+}
+  @if $filename == minus {
+  $char: "\E020";
+}
+  @if $filename == navicon {
+  $char: "\E021";
+}
+  @if $filename == paperclip {
+  $char: "\E022";
+}
+  @if $filename == pencil {
+  $char: "\E023";
+}
+  @if $filename == play {
+  $char: "\E024";
+}
+  @if $filename == plus {
+  $char: "\E025";
+}
+  @if $filename == pointer {
+  $char: "\E026";
+}
+  @if $filename == question {
+  $char: "\E027";
+}
+  @if $filename == redo {
+  $char: "\E028";
+}
+  @if $filename == refresh {
+  $char: "\E029";
+}
+  @if $filename == retweet {
+  $char: "\E02A";
+}
+  @if $filename == sc-facebook {
+  $char: "\E02B";
+}
+  @if $filename == sc-github {
+  $char: "\E02C";
+}
+  @if $filename == sc-google-plus {
+  $char: "\E02D";
+}
+  @if $filename == sc-instagram {
+  $char: "\E02E";
+}
+  @if $filename == sc-linkedin {
+  $char: "\E02F";
+}
+  @if $filename == sc-odnoklassniki {
+  $char: "\E030";
+}
+  @if $filename == sc-pinterest {
+  $char: "\E031";
+}
+  @if $filename == sc-skype {
+  $char: "\E032";
+}
+  @if $filename == sc-soundcloud {
+  $char: "\E033";
+}
+  @if $filename == sc-telegram {
+  $char: "\E034";
+}
+  @if $filename == sc-tumblr {
+  $char: "\E035";
+}
+  @if $filename == sc-twitter {
+  $char: "\E036";
+}
+  @if $filename == sc-vimeo {
+  $char: "\E037";
+}
+  @if $filename == sc-vk {
+  $char: "\E038";
+}
+  @if $filename == sc-youtube {
+  $char: "\E039";
+}
+  @if $filename == search {
+  $char: "\E03A";
+}
+  @if $filename == share-apple {
+  $char: "\E03B";
+}
+  @if $filename == share-google {
+  $char: "\E03C";
+}
+  @if $filename == spinner-2 {
+  $char: "\E03D";
+}
+  @if $filename == spinner-3 {
+  $char: "\E03E";
+}
+  @if $filename == spinner {
+  $char: "\E03F";
+}
+  @if $filename == star {
+  $char: "\E040";
+}
+  @if $filename == tag {
+  $char: "\E041";
+}
+  @if $filename == trash {
+  $char: "\E042";
+}
+  @if $filename == trophy {
+  $char: "\E043";
+}
+  @if $filename == undo {
+  $char: "\E044";
+}
+  @if $filename == unlock {
+  $char: "\E045";
+}
+  @if $filename == user {
+  $char: "\E046";
+}
+
+@return $char;
+}
+
+@mixin rm-icons($filename, $insert: before, $extend: true) {
+&:#{$insert} {
+  @if $extend {
+    @extend %rm-icons;
+  } @else {
+    @include rm-icons-styles;
+  }
+  content: rm-icons-char($filename);
+}
+}
+
+.rm-icons-archive {
+  @include rm-icons(archive);
+}
+.rm-icons-arrow-down {
+  @include rm-icons(arrow-down);
+}
+.rm-icons-arrow-left {
+  @include rm-icons(arrow-left);
+}
+.rm-icons-arrow-right {
+  @include rm-icons(arrow-right);
+}
+.rm-icons-arrow-up {
+  @include rm-icons(arrow-up);
+}
+.rm-icons-bell {
+  @include rm-icons(bell);
+}
+.rm-icons-calendar {
+  @include rm-icons(calendar);
+}
+.rm-icons-camera {
+  @include rm-icons(camera);
+}
+.rm-icons-cart {
+  @include rm-icons(cart);
+}
+.rm-icons-chart {
+  @include rm-icons(chart);
+}
+.rm-icons-check {
+  @include rm-icons(check);
+}
+.rm-icons-chevron-down {
+  @include rm-icons(chevron-down);
+}
+.rm-icons-chevron-left {
+  @include rm-icons(chevron-left);
+}
+.rm-icons-chevron-right {
+  @include rm-icons(chevron-right);
+}
+.rm-icons-chevron-up {
+  @include rm-icons(chevron-up);
+}
+.rm-icons-clock {
+  @include rm-icons(clock);
+}
+.rm-icons-close-o {
+  @include rm-icons(close-o);
+}
+.rm-icons-close {
+  @include rm-icons(close);
+}
+.rm-icons-comment {
+  @include rm-icons(comment);
+}
+.rm-icons-credit-card {
+  @include rm-icons(credit-card);
+}
+.rm-icons-envelope {
+  @include rm-icons(envelope);
+}
+.rm-icons-exclamation {
+  @include rm-icons(exclamation);
+}
+.rm-icons-external-link {
+  @include rm-icons(external-link);
+}
+.rm-icons-eye {
+  @include rm-icons(eye);
+}
+.rm-icons-gear {
+  @include rm-icons(gear);
+}
+.rm-icons-heart {
+  @include rm-icons(heart);
+}
+.rm-icons-image {
+  @include rm-icons(image);
+}
+.rm-icons-like {
+  @include rm-icons(like);
+}
+.rm-icons-link {
+  @include rm-icons(link);
+}
+.rm-icons-location {
+  @include rm-icons(location);
+}
+.rm-icons-lock {
+  @include rm-icons(lock);
+}
+.rm-icons-minus {
+  @include rm-icons(minus);
+}
+.rm-icons-navicon {
+  @include rm-icons(navicon);
+}
+.rm-icons-paperclip {
+  @include rm-icons(paperclip);
+}
+.rm-icons-pencil {
+  @include rm-icons(pencil);
+}
+.rm-icons-play {
+  @include rm-icons(play);
+}
+.rm-icons-plus {
+  @include rm-icons(plus);
+}
+.rm-icons-pointer {
+  @include rm-icons(pointer);
+}
+.rm-icons-question {
+  @include rm-icons(question);
+}
+.rm-icons-redo {
+  @include rm-icons(redo);
+}
+.rm-icons-refresh {
+  @include rm-icons(refresh);
+}
+.rm-icons-retweet {
+  @include rm-icons(retweet);
+}
+.rm-icons-sc-facebook {
+  @include rm-icons(sc-facebook);
+}
+.rm-icons-sc-github {
+  @include rm-icons(sc-github);
+}
+.rm-icons-sc-google-plus {
+  @include rm-icons(sc-google-plus);
+}
+.rm-icons-sc-instagram {
+  @include rm-icons(sc-instagram);
+}
+.rm-icons-sc-linkedin {
+  @include rm-icons(sc-linkedin);
+}
+.rm-icons-sc-odnoklassniki {
+  @include rm-icons(sc-odnoklassniki);
+}
+.rm-icons-sc-pinterest {
+  @include rm-icons(sc-pinterest);
+}
+.rm-icons-sc-skype {
+  @include rm-icons(sc-skype);
+}
+.rm-icons-sc-soundcloud {
+  @include rm-icons(sc-soundcloud);
+}
+.rm-icons-sc-telegram {
+  @include rm-icons(sc-telegram);
+}
+.rm-icons-sc-tumblr {
+  @include rm-icons(sc-tumblr);
+}
+.rm-icons-sc-twitter {
+  @include rm-icons(sc-twitter);
+}
+.rm-icons-sc-vimeo {
+  @include rm-icons(sc-vimeo);
+}
+.rm-icons-sc-vk {
+  @include rm-icons(sc-vk);
+}
+.rm-icons-sc-youtube {
+  @include rm-icons(sc-youtube);
+}
+.rm-icons-search {
+  @include rm-icons(search);
+}
+.rm-icons-share-apple {
+  @include rm-icons(share-apple);
+}
+.rm-icons-share-google {
+  @include rm-icons(share-google);
+}
+.rm-icons-spinner-2 {
+  @include rm-icons(spinner-2);
+}
+.rm-icons-spinner-3 {
+  @include rm-icons(spinner-3);
+}
+.rm-icons-spinner {
+  @include rm-icons(spinner);
+}
+.rm-icons-star {
+  @include rm-icons(star);
+}
+.rm-icons-tag {
+  @include rm-icons(tag);
+}
+.rm-icons-trash {
+  @include rm-icons(trash);
+}
+.rm-icons-trophy {
+  @include rm-icons(trophy);
+}
+.rm-icons-undo {
+  @include rm-icons(undo);
+}
+.rm-icons-unlock {
+  @include rm-icons(unlock);
+}
+.rm-icons-user {
+  @include rm-icons(user);
+}

@@ -1,0 +1,22 @@
+page-cart{
+    .quantity{
+        text-align: center;
+        padding-left: 10px; 
+    }
+    .emptyCart{
+       img{
+            height: 50vh;
+            width: auto;
+            margin: auto;
+            display: block;
+        }
+
+        ion-icon {
+           display: inline-block;
+           font-size: 2.7em !important;
+        }
+    }
+    .empty-cart{ 
+        margin-top: calc(90% - 260px);
+    }
+}

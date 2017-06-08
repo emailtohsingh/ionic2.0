@@ -1,0 +1,59 @@
+page-home {
+    .productName{
+        text-transform: capitalize;
+    }
+
+    ion-col{
+        ion-icon{
+            float: right;
+            margin: auto;
+        }
+    }
+    .truncate {
+        width: 150px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+    }
+    
+    ion-col[width-33], ion-col[width-34] {
+        box-sizing: border-box;
+        -webkit-flex: 0 0 33.3333%;
+        -ms-flex: 0 0 33.3333%;
+        flex: 0 0 33.3333%;
+        max-width: 33.3333%;
+        padding: 16px;
+        background: rgba(255, 255, 255, 0.5);
+        border: 1px solid rgba(158, 158, 158, 0.1);
+        margin: 10px 0;
+    }
+
+    ion-col[width-50] {
+        box-sizing: border-box;
+        -webkit-flex: 0 0 55.55%;
+        -ms-flex: 0 0 55.55%;
+        flex: 0 0 55.55%;
+        max-width: 55.55%;
+    }
+
+    .cart-notification-badge {
+        position:absolute !important; 
+        top:-5px !important;
+        left:10px !important; 
+        font-size:9px !important; 
+        font-weight:bold !important;
+    }
+
+    .cart-notification{
+        position:relative !important; 
+        font-weight:bold !important; 
+        font-size:1.6em !important; 
+    }
+
+    .font-size{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-size : 12px;
+    }
+    
+}

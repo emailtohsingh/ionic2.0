@@ -1,0 +1,87 @@
+page-apphome {
+  .login-content {
+    overflow: hidden;
+    background: rgb(242, 157, 15);
+ 
+    .img-logo {
+      text-align: center;
+      margin: 20px -50px;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      min-width: 30px;
+    }
+ 
+    .login-box {
+      background:rgb(200, 170, 10);
+      padding: 20px 20px 0px 20px;
+      margin-top: 30px;
+    }
+ 
+    ion-row {
+       align-items: center;
+       text-align: center;
+     }
+ 
+     ion-item {
+         border-radius: 30px !important;
+         padding-left: 30px !important;
+         font-size: 0.9em;
+         margin-bottom: 10px;
+         border: 1px solid #ffffff;
+         border-bottom: 0px !important;
+         box-shadow: none !important;
+     }
+ 
+     .signup-col {
+       margin: 0px 16px 0px 16px;
+       padding-bottom: 20px;
+     }
+ 
+     .item-inner {
+       border-bottom-color: #ffffff !important;
+       box-shadow: none !important;
+     }
+ 
+     .signup-btn {
+       background: rgb(156,40,40);
+       border-radius: 20px !important;
+       height:37px; 
+       width:100px; 
+       margin: 20px -82px; 
+       position:relative;
+       top:50%; 
+       left:50%;
+       min-width: 30px;
+       width: 200px;
+     }
+
+     .login-btn {
+       background: #ffffff;
+       border-radius: 20px !important;
+       text-align: center;
+       height:37px; 
+       width:100px; 
+       margin: 20px -82px; 
+       position:relative;
+       top:50%; 
+       left:50%;
+       min-width: 30px;
+       width: 200px;
+     }
+ 
+     .register-btn {
+       color: #ffffff;
+       font-size: 0.8em;
+       text-align: center;
+       height:37px; 
+       width:100px; 
+       margin: 20px -82px; 
+       position:relative;
+       top:50%; 
+       left:50%;
+       min-width: 30px;
+       width: 200px;
+     }
+  }
+ }

@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-navbar color="danger">
+        <ion-title>{{product.name}}</ion-title>
+        <ion-buttons start>
+            <button menuToggle><ion-icon name="menu"></ion-icon></button>
+        </ion-buttons>
+        <ion-buttons right (click)="openCart()">
+            <button ion-button>
+                <ion-icon name="ios-cart-outline" class="cart-notification" color="white">
+                <ion-badge *ngIf="cartSize > 0" color="danger" class="cart-notification-badge">{{cartSize}}</ion-badge>
+                </ion-icon>
+            </button>
+            <button ion-button>
+                <ion-icon name="notifications" class="cart-notification" color="white">
+                <ion-badge *ngIf="cartSize > 0"color="danger" class="cart-notification-badge">{{cartSize}}</ion-badge>
+                </ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+    <ion-slides [options]="slidingOptions" style="max-height:400px">
+        <ion-slide *ngFor="let image of product.picture" (click)="openImages(product)">
+            <img [src]="image">
+        </ion-slide>
+    </ion-slides>
+    <ion-item-divider></ion-item-divider>
+    <ion-item text-wrap>
+        <h2>{{product.name}}</h2>
+        <p [innerHTML]="selectedProduct.description"></p>
+    </ion-item>
+    <ion-item>
+        <ion-icon name="pricetag" color="orng" item-left></ion-icon>
+        <h3 color="dark"><ion-icon ios="logo-bitcoin" md="logo-bitcoin"></ion-icon> {{product.price}}</h3>
+        <ion-note item-right>
+            <ion-icon color="orng" name="ios-add-circle-outline" (click)="addToCart(product)"></ion-icon>
+        </ion-note>
+    </ion-item>
+    <ion-item>
+        <ion-label>Unit</ion-label>
+        <button color="orng" ion-button>TBD</button>
+    </ion-item>
+    <ion-item-divider></ion-item-divider>
+    <ion-item>
+        Highlights
+        <ion-note item-left>Description</ion-note>
+        {{product.description}}
+    </ion-item>
+</ion-content>

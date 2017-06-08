@@ -1,0 +1,22 @@
+<div color="dark" class="header-text">
+  Rate Us?
+  <div class="close-btn-wrapper">
+      <button ion-button color="dark" (click)="dismiss()" class="close-btn2" small>
+        <span ion-text color="primary" showWhen="ios">Cancel</span>
+        <ion-icon name="md-close" showWhen="android,windows" small></ion-icon>
+      </button>
+    </div>
+</div>
+<ion-list>
+  <ion-row class="content-text">
+    How did you like shopping with RM Live?
+  </ion-row>
+  <ion-row class="row-dots">
+    <ion-col (click)="callMeh()">
+      <button ion-button="dot" class="dot-meh">Meh!</button>
+    </ion-col>
+    <ion-col (click)="callLovedIt()">
+      <button ion-button="dot" class="dot-loved">Loved it!</button>
+    </ion-col>
+  </ion-row>
+</ion-list>

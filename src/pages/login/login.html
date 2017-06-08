@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-segment [(ngModel)]="segment" color="dark">
+      <ion-segment-button value="signIn">
+        Sign In
+      </ion-segment-button>
+      <ion-segment-button value="signUp">
+        Sign Up
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding class="bgAuth">
+  <section *ngIf="segment == 'signIn'">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input [(ngModel)]="registerCredentials.email" type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input [(ngModel)]="registerCredentials.password" type="password"></ion-input>
+      </ion-item>
+    </ion-list>
+  </section>
+  <section *ngIf="segment == 'signUp'">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>First Name</ion-label>
+        <ion-input [(ngModel)]="registerCredentials.fName" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Last Name</ion-label>
+        <ion-input [(ngModel)]="registerCredentials.lName" type="text"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input [(ngModel)]="registerCredentials.email" type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input [(ngModel)]="registerCredentials.password" type="password"></ion-input>
+      </ion-item>
+    </ion-list>
+  </section>
+  <button ion-button full round color="danger" class="tangoAnimate quick tangoCentre" [disabled]="isInvalid()" (click)="login('',segment)" [ngClass]="setClass()">
+    <span *ngIf="!showSpinner">Sign In</span>
+    <ion-spinner [color]="spinnerColor" *ngIf="showSpinner"></ion-spinner>
+  </button>
+  <button ion-button full round color="danger" class="tangoAnimate quick tangoCentre" [disabled]="isInvalid()" (click)="login('google')" [ngClass]="setClass()">
+    <span *ngIf="!showSpinner">Sign in with Google</span>
+    <ion-spinner [color]="spinnerColor" *ngIf="showSpinner"></ion-spinner>
+  </button>
+</ion-content>

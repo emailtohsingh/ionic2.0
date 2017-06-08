@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <ion-title>Checkout</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-title>Shipping Address</ion-title>
+    </ion-card-header >
+      
+    <ion-card-content>
+
+      <div style="position: relative">
+        <ion-fab right top>
+          <custom-icon set="rm-icons" name='pencil' (click)="editAddress(shippingAddr)"></custom-icon>
+        </ion-fab>
+      </div>
+      <ion-item text-wrap *ngFor="let address of shippingAddr">
+        <h2>{{address.house}}</h2>
+        <p>{{address.locality}}, {{address.city}}, {{address.state}}, {{address.country}} {{address.zipcode}}</p>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <div style="position: relative">
+      <ion-fab right top>
+        <button ion-fab color="danger" class="fab-map">
+        <ion-icon name="pin"></ion-icon>
+      </button>
+      </ion-fab>
+    </div>
+    <ion-item>
+      <ion-icon color="subtle" large item-left name='cloud'></ion-icon>
+      <h2>Yoshi's Island</h2>
+      <p>Iggy Koopa</p>
+    </ion-item>
+    <ion-item>
+      <ion-icon color="subtle" large item-left name='leaf'></ion-icon>
+      <h2>Forest of Illusion</h2>
+      <p>Roy Koopa</p>
+    </ion-item>
+    <ion-item actions>
+      <span ion-text item-left class="item-bold">3 hr</span>
+      <span ion-text item-left color="subtle">(4.8 mi)</span>
+      <button ion-button color="danger" clear item-right icon-left>
+      <ion-icon name='navigate'></ion-icon>
+      Start
+    </button>
+    </ion-item>
+
+  </ion-card>
+
+
+</ion-content>

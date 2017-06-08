@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Map</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="map-page"> 
+    <div style="height: 90%; width: 100%; border-bottom :1px" id="map"></div>
+    <div style="height: 10%; width: 100%" id="currentLocation">
+      <button ion-button (click)="getAddressFromLatLang()">Use Your Current Location</button>
+    </div>
+
+</ion-content>

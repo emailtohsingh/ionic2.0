@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-navbar color="danger">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Products
+    </ion-title>
+    <ion-buttons right (click)="openCart()">
+      <button ion-button>
+        <ion-icon name="ios-cart-outline" class="cart-notification" color="white">
+          <ion-badge *ngIf="cartSize > 0" color="danger" class="cart-notification-badge">{{cartSize}}</ion-badge>
+        </ion-icon>
+      </button>
+      <button ion-button>
+        <ion-icon name="notifications" class="cart-notification" color="white">
+          <ion-badge *ngIf="cartSize > 0"color="danger" class="cart-notification-badge">{{cartSize}}</ion-badge>
+        </ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!--
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+  -->
+  <div style="height: 20px; width: auto; background: gray">
+    {{noOfProduct}} items of {{categoryName}}
+  </div>
+  <ion-item>
+    <ion-list inset *ngFor="let product of productItems">
+      <hr>
+      <ion-row class="fontSize">
+        <ion-col (click)="clickedProduct(product)" width-30>
+          <ion-avatar item-left width-33>
+            <ion-thumbnail *ngIf="product.picture" item-left>
+              <img src="{{product.picture[0]}}" />
+            </ion-thumbnail>
+          </ion-avatar>
+        </ion-col>
+        <ion-col width-66 item-left>
+          <ion-row (click)="clickedProduct(product)">
+            <ion-col item-left class="wrap-text">{{product.description}}</ion-col>
+          </ion-row>
+          <ion-row (click)="clickedProduct(product)">
+            <ion-col item-left>Uinit: 500 gm</ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col item-left width-66 (click)="clickedProduct(product)">
+                <ion-icon ios="logo-bitcoin" md="logo-bitcoin"></ion-icon> {{product.price}}
+            </ion-col>
+            <ion-col item-right width-10>
+              <ion-icon color="orng" name="ios-add-circle-outline" (click)="addToCart(product, 1)"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+  </ion-item>
+</ion-content>

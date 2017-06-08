@@ -1,0 +1,28 @@
+<div color="dark" class="header-text">
+    Share us?
+    <div class="close-btn-wrapper">
+        <button ion-button color="dark" (click)="dismiss()" class="close-btn2" small>
+        <span ion-text color="primary" showWhen="ios">Cancel</span>
+        <ion-icon name="md-close" showWhen="android,windows" small></ion-icon>
+      </button>
+    </div>
+</div>
+
+<ion-list class="content-text" no-margin>
+    <ion-row>
+        <ion-col width-66 item-left>
+            <button ion-fab color="facebook" (click)="shareViaFacebook()"><ion-icon ios="logo-facebook" md="logo-facebook"></ion-icon></button>
+        </ion-col>
+        <ion-col width-33 item-right>
+            <button ion-fab color="whatsapp" (click)="shareViaWhatsApp()"><ion-icon ios="logo-whatsapp" md="logo-whatsapp" large></ion-icon></button>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col width-66 item-left>
+            <button ion-fab color="orng" (click)="shareViaEmail()"><ion-icon ios="ios-mail" md="md-mail"></ion-icon></button>
+        </ion-col>
+        <ion-col width-33 item-right>
+            <button ion-fab color="facebook" (click)="shareViaTwitter()"><ion-icon ios="logo-twitter" md="logo-twitter"></ion-icon></button>
+        </ion-col>
+    </ion-row>
+</ion-list>

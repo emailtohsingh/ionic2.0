@@ -1,0 +1,3 @@
+<ion-tabs #ionTabs [scrollable-tabs]="ionTabs" [opts]="scrollableTabsopts" selectedIndex='0' color="danger" mode='md' tabsHighlight="true" tabsPlacement="bottom">
+	<ion-tab *ngFor="let tab of tabs" [root]="tab.root" [tabTitle]="tab.title" [tabIcon]="tab.icon" [show]="tab.isHide" ></ion-tab>
+</ion-tabs>

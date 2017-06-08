@@ -1,0 +1,8 @@
+page-tabs {
+    .tabbar::after {
+		content: none;
+	}
+    .tabs-ios-tab-font-size{
+        font-size: 5px;
+    }
+}
